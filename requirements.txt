@@ -1,0 +1,4 @@
+astronomer-cosmos==1.0.3
+apache-airflow-providers-microsoft-azure==6.1.1
+dbt-snowflake==1.5.1
+apache-airflow-providers-snowflake==4.1.0
