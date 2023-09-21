@@ -1,0 +1,13 @@
+dbt_dfs:
+  outputs:
+    dev:
+      account: is64856.central-india.azure
+      database: ANALYTICS
+      password: Nishad@1997
+      role: ACCOUNTADMIN
+      schema: DBT_NWANKHEDE
+      threads: 10
+      type: snowflake
+      user: nishadwankhede800
+      warehouse: TRANSFORMING
+  target: dev

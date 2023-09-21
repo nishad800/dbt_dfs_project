@@ -1,0 +1,59 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+
+    database: raw
+
+    schema: jaffle_shop
+
+    tables:
+      - name: EXTERNAL_CUSTOMER_WITH_PARTITION
+        
+        columns:
+          - name: customer_id
+
+            tests:
+              - unique
+              - warn_if_null_with_insert
+      - name: EXTERNAL_ORDER_PARTION
+        
+        columns:
+          - name: order_id
+
+            tests:
+              - unique
+              - warn_if_null_with_insert
+
+models:
+  - name: customer_order_details_ext
+
+    columns:
+      - name: customer_id
+
+        tests:
+          - unique
+
+          #- warn_if_null_with_insert
+
+  - name: stg_customer_ext
+
+    columns:
+      - name: customer_id
+
+        tests:
+          - unique
+
+          #- warn_if_null_with_insert
+
+  - name: stg_order_ext
+
+    columns:
+      - name: order_id
+
+        tests:
+          - unique
+
+          #- warn_if_null_with_insert
+
+
